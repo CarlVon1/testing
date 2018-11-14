@@ -1,0 +1,26 @@
+
+
+//Add a static method countLetters(String s, char c)to the following class Recursive_P1_A. 
+//The method MUST BE RECURSIVE and should return the number of times that character c appears in string s.  
+//The method may only use the length length, charAt charAt and substring substring methods from the String class and 
+//no other methods from any other Java API class.
+public class Recursive_P1_A {
+
+		public static int countLetters(String s, char c) {
+		int count =0;
+			if(s == null) {
+				return 0;
+			}
+			if(s.isEmpty()) {
+				return 0;
+			}
+			if(s.charAt(s.length()-1) == c) {
+				count ++;
+			}
+			String sub = s.substring(0, s.length()-1);
+			return count + countLetters(sub,c);
+			
+		}
+	}
+
+
