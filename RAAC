@@ -1,0 +1,27 @@
+//Add a static method replaceWord(text, find, replace) to the following class Recursive_P2_A. 
+//The method MUST BE RECURSIVE and should return a new String that is just like  text with  every occurrence
+//of String find replaced with String replace. NO LOOPS ALLOWED.  The replaceWord method may only use the length, 
+//charAt, indexOf and substring methods from the String class and no other methods from any other Java API class.
+//Use the following RecursiveP2_A_Test test class to make sure that your method works;
+
+public class Recursive_P2_A {
+
+	public static String replaceWord(String text, String find, String replace) {
+		if(text == null) {
+			return null;
+		}
+		if(text.isEmpty()) { 
+			return text;
+		}
+		if(text.equals(find)) {
+			return replace;
+		}
+		if(text.length()<find.length()) {
+			return text;
+		}
+		if(text.substring(0, find.length()).equals(find)) {
+			return replace + replaceWord(text.substring(find.length()),find, replace);
+		}
+		return text.charAt(0)+replaceWord(text.substring(1),find,replace);
+	}
+}
