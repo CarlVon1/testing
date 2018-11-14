@@ -1,0 +1,36 @@
+
+public class Recursive_P2_B {
+	public static String replaceNonAlpha(String text) {
+	
+		    	String sub = text.substring(1, text.length());
+		    	String newString ="";
+				
+				if(text.isEmpty()) {
+					return text;
+				}
+				if(text == null)
+					{return text;}
+				
+				
+				
+				
+				return text;
+		
+//				if(!Character.isAlphabetic(text.charAt(0)) && !flag) {
+//					text =" " + text.substring(1, text.length());
+//					System.out.println(text);
+//					return text.charAt(0) + replaceNonAlpha(text.substring(1, text.length()));
+//				}
+//				else if(text.substring(0,1).equals(" ") && text.length() > 1) {
+//					text = text.substring(1, text.length());
+//					System.out.println(text);
+//					return text.charAt(0) + replaceNonAlpha(text.substring(1, text.length()));
+//				}
+//		
+//				else {
+//					return text.charAt(0) + replaceNonAlpha(text.substring(1, text.length()));
+//				}
+	}
+	}
+	
+	
