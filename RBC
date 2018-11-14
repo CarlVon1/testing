@@ -1,0 +1,26 @@
+
+import java.util.ArrayList;
+public class Recursive_P1_B {
+	public static int countNumbers(ArrayList<Integer> list, int n, int i) {
+		int count = 0;
+		if (list == null)  {
+			return 0; 
+		}
+		
+		if(i< list.size()) {
+			if(list.get(i)==n) {
+				count++;
+				i++;
+				return count+countNumbers(list,n,i);
+			}
+			else {
+				i++;
+				return count+countNumbers(list,n,i);
+			}
+		}
+		else {
+			return count;
+		}
+	}
+}
+
